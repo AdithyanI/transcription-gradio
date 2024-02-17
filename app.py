@@ -1,8 +1,5 @@
-import os
-
 import gradio as gr
 from clipsai import Transcriber
-import tempfile
 
 
 def transcribe_audio(audio_file: str):
@@ -22,5 +19,6 @@ iface = gr.Interface(
     title="Audio Transcription Service",
     description="Upload your audio file and get the transcription as a text file."
 )
+
 if __name__ == "__main__":
     iface.launch(debug=True)
